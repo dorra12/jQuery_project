@@ -1,0 +1,10 @@
+main {
+    width: 90%;
+    margin: auto;
+}
+
+.btn-group {
+    margin: auto 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}

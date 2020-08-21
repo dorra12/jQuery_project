@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <!-- bootstrap css -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <!-- font awesome cdn-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
+    <!-- my style sheet-->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <!--nav bar-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">FigurActors</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Availabity</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Actors</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--end nav bar-->
+    </header>
+
+    <main>
+        <hr />
+        <!--title-->
+        <h1 class="display-4">Pick a category:</h1>
+        <!--buttons-->
+        <div class="btn-group btn-group-toggle text-center" data-toggle="buttons">
+            <label class="btn btn-primary active">
+          <input
+            type="radio"
+            name="options"
+            id="option1"
+            autocomplete="off"
+            value="male"
+            checked
+          />
+          <i class="fas fa-male"></i><br />Male</label
+        >
+        <label class="btn btn-primary">
+          <input
+            type="radio"
+            name="options"
+            value="female"
+            id="option2"
+            autocomplete="off"
+          />
+          <i class="fas fa-female"></i><br />Female
+        </label>
+            <label class="btn btn-primary">
+          <input
+            type="radio"
+            name="options"
+            id="option3"
+            value="baby"
+            autocomplete="off"
+          /><i class="fas fa-baby"></i><br />Baby
+        </label>
+        </div>
+        <hr />
+        <!--end of buttons-->
+        <!--form-->
+        <form>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput">Company</label>
+                    <input type="text" class="companyName form-control" id="formGroupExampleInput" placeholder="Company name" required />
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">Email</label>
+                    <input type="email" class="email form-control" id="inputEmail4" placeholder="email@example.com" required />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label class="my-1 mr-2" for="inlineFormCustomSelect">Category</label
+            >
+            <select
+              required
+              class="categoryOptions custom-select my-1 mr-sm-2"
+              id="inlineFormCustomSelect"
+            >
+              <option value="1">Male</option>
+              <option value="2">Female</option>
+              <option value="3">Baby</option>
+            </select>
+          </div>
+          <div class="form-group col-md-6">
+            <label class="my-1 mr-2" for="inlineFormCustomSelectPref"
+              >Actor</label
+            >
+            <select
+              required
+              class="custom-select my-1 mr-sm-2 actorsOptions"
+              id="inlineFormCustomSelectPref"
+            >
+              <option id="defaultOption" disabled selected value="1"
+                >Select an actor</option
+              >
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+          Ask for availability
+        </button>
+      </form>
+      <!--end of the form-->
+      <!--card display none-->
+      <hr />
+      <div class="card-columns">
+        <div class="card d-none">
+          <img
+            src="https://randomuser.me/api/portraits/men/1.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Example</h5>
+          </div>
+        </div>
+      </div>
+      <!--end of the card-->
+    </main>
+
+    <!--CDN jQuery-->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <!-- CDN bootstrap script -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
